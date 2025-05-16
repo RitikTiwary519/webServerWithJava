@@ -32,6 +32,7 @@ public class Server {
                 Thread thread = new Thread(() -> server.getConsumer().accept(clientSocket));
                 thread.start();
             }
+            // serverSocket.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
